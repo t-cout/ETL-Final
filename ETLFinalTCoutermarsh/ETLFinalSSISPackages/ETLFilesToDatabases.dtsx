@@ -1,0 +1,3006 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/1/2025 2:44:52 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="TYLERS_LAPTOP"
+  DTS:CreatorName="TYLERS_LAPTOP\tyler"
+  DTS:DTSID="{617F36DC-2FC2-40CB-87E8-E956F1A4D372}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5685.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="63"
+  DTS:VersionGUID="{1B20CBF7-7FDB-4374-B474-994343EEC2FD}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Bad Data Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{4585B7B0-F10A-4595-BD9B-42873B3E3112}"
+      DTS:ObjectName="Bad Data Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\_BISolutions\ETLFinalTCoutermarsh\DataFiles\BadData.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FName"
+              DTS:DTSID="{5CCCDD8D-C047-4ED1-B158-7E70A305204D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LName"
+              DTS:DTSID="{24A14F53-8CFC-4E1B-A70C-653E82DBE6AE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Email"
+              DTS:DTSID="{6469C00F-456A-4798-B231-93A0AC1E5BAE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Address"
+              DTS:DTSID="{3E833C92-786B-4416-AEC1-5E4853C43086}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="City"
+              DTS:DTSID="{18A273D4-6F1D-4516-A632-DC9BB4EB159B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="State"
+              DTS:DTSID="{40A16F9C-B7C4-4434-941F-E4ED7C0D4C2A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ZipCode"
+              DTS:DTSID="{9B3CEC3D-517B-46F7-8AF2-CF4A3E0AA845}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Bellevue Visits Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{C751F4F3-07F4-4CA0-8156-A0355F923DF5}"
+      DTS:ObjectName="Bellevue Visits Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\_BISolutions\ETLFinalTCoutermarsh\DataFiles\ClinicDailyData\Bellevue\20100102Visits.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Time"
+              DTS:DTSID="{1CC1E770-CF4F-466C-A1EF-C911FABA36A7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Patient"
+              DTS:DTSID="{5A3C9042-12D5-4074-B9FF-AA8AE99F2129}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Doctor"
+              DTS:DTSID="{2A74026F-3318-4795-9A37-698AB324F5E8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Procedure"
+              DTS:DTSID="{413AD5DF-85BA-4955-BC09-A2E368C89C20}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Charge"
+              DTS:DTSID="{D51C1DA9-5F8A-4DE4-A627-B5F302C96FA9}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Kirkland Visits Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{92FC5CE2-5415-46F3-A58E-B85C97949964}"
+      DTS:ObjectName="Kirkland Visits Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\_BISolutions\ETLFinalTCoutermarsh\DataFiles\ClinicDailyData\Kirkland\20100102Visits.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Time"
+              DTS:DTSID="{AEB5B3F6-F74B-4835-BC11-6FA4777CACCD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Patient"
+              DTS:DTSID="{3C8F6432-5E76-4586-9E1F-91304A00C825}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Clinic"
+              DTS:DTSID="{FCB821AB-8E80-4D3E-B386-E0A9559953C8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Doctor"
+              DTS:DTSID="{6ACD8266-D179-4051-BC1B-0B21F5D41510}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Procedure"
+              DTS:DTSID="{2205EFAA-0B1C-4AF3-B7CB-5E11DB9FF14B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Charge"
+              DTS:DTSID="{1A507A54-49FA-45C7-921C-5C35E509CF8C}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.Patients]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{C0016257-2C2E-43CD-A4A9-2A9545D64920}"
+      DTS:ObjectName="localhost.Patients">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=Patients;Integrated Security=True;Encrypt=False;TrustServerCertificate=True;Application Name=SSIS-Package-{C0016257-2C2E-43CD-A4A9-2A9545D64920}localhost.Patients;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.tempdb1]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{34E6E136-488F-4119-929B-6AFA28AB36CB}"
+      DTS:ObjectName="localhost.tempdb1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=tempdb;Integrated Security=True;Encrypt=False;TrustServerCertificate=True;Application Name=SSIS-Package-{34E6E136-488F-4119-929B-6AFA28AB36CB}localhost.tempdb1;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Redmond Visits Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{3DA0AAF4-AE25-4316-B739-F7635C4EF014}"
+      DTS:ObjectName="Redmond Visits Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\_BISolutions\ETLFinalTCoutermarsh\DataFiles\ClinicDailyData\Redmond\20100102Visits.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Time"
+              DTS:DTSID="{6D52A706-C6C6-4DFE-975A-6C6F1B4AE92E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Clinic"
+              DTS:DTSID="{6873B70A-1513-44E0-A9DA-8B96D8F524A7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Patient"
+              DTS:DTSID="{8A0DFA29-7B73-45BE-BD21-E2BB5D750EEF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Doctor"
+              DTS:DTSID="{9EDF1EB6-7F63-4160-BC2F-B0425B1BFD8D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Procedure"
+              DTS:DTSID="{68DDA3BB-C51B-44A3-BAF8-906059499DAA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Charge"
+              DTS:DTSID="{DBE27219-44CA-4EA7-8819-A94E4E0FD677}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[TYLERS_LAPTOP]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{1867C162-C2F3-4EC0-BDA9-CEA90C424632}"
+      DTS:ObjectName="TYLERS_LAPTOP">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=master;Integrated Security=True;Encrypt=False;TrustServerCertificate=True;Application Name=SSIS-Package-{1867C162-C2F3-4EC0-BDA9-CEA90C424632}TYLERS_LAPTOP;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ValidData Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{6A109AE4-ECD5-4B78-A2CE-9093B5E15075}"
+      DTS:ObjectName="ValidData Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\_BISolutions\ETLFinalTCoutermarsh\DataFiles\ValidData.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FName"
+              DTS:DTSID="{A43694AD-A86B-4D31-A0A1-27848B13CD51}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LName"
+              DTS:DTSID="{EB60FBE9-2219-4968-8C9C-8AEFC76450E6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Email"
+              DTS:DTSID="{5E7CC9CB-03E5-4001-BE82-7F988146AA4D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Address"
+              DTS:DTSID="{01D79BFC-8B77-48FB-9880-6C02EB7F3659}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="City"
+              DTS:DTSID="{9D05AF51-5A35-409E-9187-F11FD28F6B84}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="State"
+              DTS:DTSID="{A27B0ACE-E5E9-458C-93C8-33ECA23EA0C3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ZipCode"
+              DTS:DTSID="{6C8FD5B2-E1E6-41A0-931D-157490A5B94B}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Load to Patients Destination Sequence Container"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{6A90A5B5-67EA-46A7-9B88-335E26A97E68}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load to Patients Destination Sequence Container">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{A9A53667-5185-4C03-B355-0CCAAC088FC1}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Extract Patient Data Flow Task"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\ADO NET Destination"
+                  componentClassID="Microsoft.ManagedComponentHost"
+                  contactInfo="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+                  description="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination."
+                  name="ADO NET Destination"
+                  usesDispositions="true"
+                  version="2">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="The Destination database table name."
+                      expressionType="Notify"
+                      name="TableOrViewName"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."Patients"</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specify the number of rows per batch. The default is 0 which uses the same size as SSIS internal buffer. "
+                      expressionType="Notify"
+                      name="BatchSize">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out. A value of 0 indicates infinite time-out. "
+                      expressionType="Notify"
+                      name="CommandTimeout">30</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether to use the SqlBulkCopy interface to improve the performance of bulk insert operations. Only certain providers support this interface."
+                      expressionType="Notify"
+                      name="UseBulkInsertWhenPossible">true</property>
+                    <property
+                      dataType="System.String"
+                      name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\ADO NET Destination.Connections[IDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[localhost.Patients]"
+                      connectionManagerRefId="Package.ConnectionManagers[localhost.Patients]"
+                      description="Managed connection manager"
+                      name="IDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input]"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="ADO NET Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Copy of FName]"
+                          cachedDataType="wstr"
+                          cachedLength="100"
+                          cachedName="Copy of FName"
+                          externalMetadataColumnId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[FName]"
+                          lineageId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of FName]" />
+                        <inputColumn
+                          refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Copy of LName]"
+                          cachedDataType="wstr"
+                          cachedLength="100"
+                          cachedName="Copy of LName"
+                          externalMetadataColumnId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[LName]"
+                          lineageId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of LName]" />
+                        <inputColumn
+                          refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Copy of Email]"
+                          cachedDataType="wstr"
+                          cachedLength="100"
+                          cachedName="Copy of Email"
+                          externalMetadataColumnId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Email]"
+                          lineageId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Email]" />
+                        <inputColumn
+                          refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Copy of Address]"
+                          cachedDataType="wstr"
+                          cachedLength="100"
+                          cachedName="Copy of Address"
+                          externalMetadataColumnId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Address]"
+                          lineageId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Address]" />
+                        <inputColumn
+                          refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Copy of City]"
+                          cachedDataType="wstr"
+                          cachedLength="100"
+                          cachedName="Copy of City"
+                          externalMetadataColumnId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[City]"
+                          lineageId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of City]" />
+                        <inputColumn
+                          refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Copy of State]"
+                          cachedDataType="wstr"
+                          cachedLength="100"
+                          cachedName="Copy of State"
+                          externalMetadataColumnId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[State]"
+                          lineageId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of State]" />
+                        <inputColumn
+                          refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Copy of ZipCode]"
+                          cachedDataType="wstr"
+                          cachedLength="100"
+                          cachedName="Copy of ZipCode"
+                          externalMetadataColumnId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[ZipCode]"
+                          lineageId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ZipCode]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[ID]"
+                          dataType="i4"
+                          name="ID" />
+                        <externalMetadataColumn
+                          refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[FName]"
+                          dataType="wstr"
+                          length="28"
+                          name="FName" />
+                        <externalMetadataColumn
+                          refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[LName]"
+                          dataType="wstr"
+                          length="29"
+                          name="LName" />
+                        <externalMetadataColumn
+                          refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Email]"
+                          dataType="wstr"
+                          length="100"
+                          name="Email" />
+                        <externalMetadataColumn
+                          refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Address]"
+                          dataType="wstr"
+                          length="97"
+                          name="Address" />
+                        <externalMetadataColumn
+                          refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[City]"
+                          dataType="wstr"
+                          length="72"
+                          name="City" />
+                        <externalMetadataColumn
+                          refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[State]"
+                          dataType="wstr"
+                          length="50"
+                          name="State" />
+                        <externalMetadataColumn
+                          refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[ZipCode]"
+                          dataType="i4"
+                          name="ZipCode" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\ADO NET Destination.Outputs[ADO NET Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="ADO NET Destination Error Output"
+                      synchronousInputId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Data Conversion"
+                  componentClassID="Microsoft.DataConvert"
+                  contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Data Conversion"
+                  name="Data Conversion"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
+                      name="Data Conversion Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[FName]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="FName"
+                          lineageId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[FName]" />
+                        <inputColumn
+                          refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[LName]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="LName"
+                          lineageId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[LName]" />
+                        <inputColumn
+                          refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Email]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Email"
+                          lineageId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Email]" />
+                        <inputColumn
+                          refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Address]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Address"
+                          lineageId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Address]" />
+                        <inputColumn
+                          refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[City]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="City"
+                          lineageId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[City]" />
+                        <inputColumn
+                          refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[State]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="State"
+                          lineageId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[State]" />
+                        <inputColumn
+                          refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[ZipCode]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="ZipCode"
+                          lineageId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[ZipCode]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Data Conversion.Outputs[Data Conversion Output]"
+                      exclusionGroup="1"
+                      name="Data Conversion Output"
+                      synchronousInputId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Data Conversion.Inputs[Data Conversion Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of FName]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="100"
+                          lineageId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of FName]"
+                          name="Copy of FName"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[FName]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of LName]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="100"
+                          lineageId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of LName]"
+                          name="Copy of LName"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[LName]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Email]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="100"
+                          lineageId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Email]"
+                          name="Copy of Email"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Email]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Address]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="100"
+                          lineageId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Address]"
+                          name="Copy of Address"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Address]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of City]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="100"
+                          lineageId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of City]"
+                          name="Copy of City"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[City]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of State]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="100"
+                          lineageId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of State]"
+                          name="Copy of State"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[State]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ZipCode]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="100"
+                          lineageId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ZipCode]"
+                          name="Copy of ZipCode"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[ZipCode]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Data Conversion Error Output"
+                      synchronousInputId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Data Conversion.Inputs[Data Conversion Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Flat File Source"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="1033"
+                  name="Flat File Source"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Flat File Source.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[ValidData Flat File Connection Manager]"
+                      connectionManagerRefId="Package.ConnectionManagers[ValidData Flat File Connection Manager]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Flat File Source.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[FName]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FName]"
+                          length="50"
+                          lineageId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[FName]"
+                          name="FName"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[LName]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[LName]"
+                          length="50"
+                          lineageId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[LName]"
+                          name="LName"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Email]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Email]"
+                          length="50"
+                          lineageId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Email]"
+                          name="Email"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Address]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Address]"
+                          length="50"
+                          lineageId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Address]"
+                          name="Address"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[City]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[City]"
+                          length="50"
+                          lineageId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[City]"
+                          name="City"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[State]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[State]"
+                          length="50"
+                          lineageId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[State]"
+                          name="State"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[ZipCode]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ZipCode]"
+                          length="50"
+                          lineageId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[ZipCode]"
+                          name="ZipCode"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FName]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="FName" />
+                        <externalMetadataColumn
+                          refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[LName]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="LName" />
+                        <externalMetadataColumn
+                          refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Email]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="Email" />
+                        <externalMetadataColumn
+                          refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Address]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="Address" />
+                        <externalMetadataColumn
+                          refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[City]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="City" />
+                        <externalMetadataColumn
+                          refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[State]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="State" />
+                        <externalMetadataColumn
+                          refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ZipCode]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="ZipCode" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="65001"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task.Paths[Data Conversion Output]"
+                  endId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input]"
+                  name="Data Conversion Output"
+                  startId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Data Conversion.Outputs[Data Conversion Output]" />
+                <path
+                  refId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task.Paths[Flat File Source Output]"
+                  endId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Flat File Source Output"
+                  startId="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Flat File Source.Outputs[Flat File Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Load to Visits Destination Sequence Container"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{D0511B68-ACC8-4EC9-BAE7-08D46AFFAF51}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load to Visits Destination Sequence Container">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Load to Visits Destination Sequence Container\Add Visits Foreign Keys Execute SQL Task"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{5DBD440A-C180-433F-ABB9-1F735A62E309}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Add Visits Foreign Keys Execute SQL Task"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{34E6E136-488F-4119-929B-6AFA28AB36CB}"
+              SQLTask:IsStoredProc="True"
+              SQLTask:SqlStatementSource="pETLInsertVisitsForeignKeys" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Load to Visits Destination Sequence Container\Insert Visits DataExecute SQL Task"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{901DE337-CEC9-4935-8948-F9A53B34CD2B}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Insert Visits DataExecute SQL Task"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{34E6E136-488F-4119-929B-6AFA28AB36CB}"
+              SQLTask:IsStoredProc="True"
+              SQLTask:SqlStatementSource="pETLInsertVisitsData" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="@Date"
+                SQLTask:DtsVariableName="System::CreationDate"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="5"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Load to Visits Destination Sequence Container.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{C32C783A-4CC1-4859-900E-57CBDEE1393B}"
+          DTS:From="Package\Load to Visits Destination Sequence Container\Insert Visits DataExecute SQL Task"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Load to Visits Destination Sequence Container\Add Visits Foreign Keys Execute SQL Task" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Pre-load Patients Sequence Container"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{EE5D900A-ED2C-492A-8AE9-B9EF8373E206}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Pre-load Patients Sequence Container">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Pre-load Patients Sequence Container\Split Valid and Invalid Emails with Python Execute Process Task"
+          DTS:CreationName="Microsoft.ExecuteProcess"
+          DTS:Description="Execute Process Task"
+          DTS:DTSID="{82CF043A-C379-43E1-8C8D-380A0C84BBD6}"
+          DTS:ExecutableType="Microsoft.ExecuteProcess"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Split Valid and Invalid Emails with Python Execute Process Task"
+          DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecuteProcessData
+              Executable="C:\Python\pythonw.exe"
+              Arguments="PythonPatientsETL.py"
+              WorkingDirectory="C:\_BISolutions\ETLFinalTCoutermarsh\Python Scripts\PythonPatientsETL" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Pre-Load Sequence Container"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{14A09F0B-BB55-444D-8DDC-CED8499CFCE8}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Pre-Load Sequence Container">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Pre-Load Sequence Container\Create Staging Tables Execute SQL Task"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{384CF542-F427-479A-AEB6-F95C87E95CBC}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Create Staging Tables Execute SQL Task"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{34E6E136-488F-4119-929B-6AFA28AB36CB}"
+              SQLTask:IsStoredProc="True"
+              SQLTask:SqlStatementSource="pETLCreateStagingTables" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Transform Visits Sequence Container"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{A85AD74E-098A-42DD-8698-70B5D1805289}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Transform Visits Sequence Container">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Transform Visits Sequence Container\Drop Visits Foreign Keys Execute SQL Task"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{36FAEC3A-CFE7-4ED6-B0EB-C2C90C9E4735}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Drop Visits Foreign Keys Execute SQL Task"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{34E6E136-488F-4119-929B-6AFA28AB36CB}"
+              SQLTask:IsStoredProc="True"
+              SQLTask:SqlStatementSource="pETLDropVisitsForeignKeys" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{9C6C1D2E-3960-49FB-A223-22BFAC321EC9}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Fill Visits Staging Data Flow Task"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\ADO NET Destination"
+                  componentClassID="Microsoft.ManagedComponentHost"
+                  contactInfo="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+                  description="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination."
+                  name="ADO NET Destination"
+                  usesDispositions="true"
+                  version="2">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="The Destination database table name."
+                      expressionType="Notify"
+                      name="TableOrViewName"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."RedmondVisitsStaging"</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specify the number of rows per batch. The default is 0 which uses the same size as SSIS internal buffer. "
+                      expressionType="Notify"
+                      name="BatchSize">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out. A value of 0 indicates infinite time-out. "
+                      expressionType="Notify"
+                      name="CommandTimeout">30</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether to use the SqlBulkCopy interface to improve the performance of bulk insert operations. Only certain providers support this interface."
+                      expressionType="Notify"
+                      name="UseBulkInsertWhenPossible">true</property>
+                    <property
+                      dataType="System.String"
+                      name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\ADO NET Destination.Connections[IDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[localhost.tempdb1]"
+                      connectionManagerRefId="Package.ConnectionManagers[localhost.tempdb1]"
+                      description="Managed connection manager"
+                      name="IDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input]"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="ADO NET Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Time]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Time"
+                          externalMetadataColumnId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Time]"
+                          lineageId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Redmond Flat File Source.Outputs[Flat File Source Output].Columns[Time]" />
+                        <inputColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Clinic]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Clinic"
+                          externalMetadataColumnId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Clinic]"
+                          lineageId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Redmond Flat File Source.Outputs[Flat File Source Output].Columns[Clinic]" />
+                        <inputColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Patient]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Patient"
+                          externalMetadataColumnId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Patient]"
+                          lineageId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Redmond Flat File Source.Outputs[Flat File Source Output].Columns[Patient]" />
+                        <inputColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Doctor]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Doctor"
+                          externalMetadataColumnId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Doctor]"
+                          lineageId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Redmond Flat File Source.Outputs[Flat File Source Output].Columns[Doctor]" />
+                        <inputColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Procedure]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Procedure"
+                          externalMetadataColumnId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Procedure]"
+                          lineageId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Redmond Flat File Source.Outputs[Flat File Source Output].Columns[Procedure]" />
+                        <inputColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Charge]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Charge"
+                          externalMetadataColumnId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Charge]"
+                          lineageId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Redmond Flat File Source.Outputs[Flat File Source Output].Columns[Charge]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Time]"
+                          dataType="wstr"
+                          length="100"
+                          name="Time" />
+                        <externalMetadataColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Clinic]"
+                          dataType="wstr"
+                          length="100"
+                          name="Clinic" />
+                        <externalMetadataColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Patient]"
+                          dataType="wstr"
+                          length="100"
+                          name="Patient" />
+                        <externalMetadataColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Doctor]"
+                          dataType="wstr"
+                          length="100"
+                          name="Doctor" />
+                        <externalMetadataColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Procedure]"
+                          dataType="wstr"
+                          length="100"
+                          name="Procedure" />
+                        <externalMetadataColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Charge]"
+                          dataType="wstr"
+                          length="100"
+                          name="Charge" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\ADO NET Destination.Outputs[ADO NET Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="ADO NET Destination Error Output"
+                      synchronousInputId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Flat File Source"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="1033"
+                  name="Bellevue Visits Flat File Source"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Flat File Source.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Bellevue Visits Flat File Connection Manager]"
+                      connectionManagerRefId="Package.ConnectionManagers[Bellevue Visits Flat File Connection Manager]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Flat File Source.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Flat File Source.Outputs[Flat File Source Output].Columns[Time]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Time]"
+                          length="50"
+                          lineageId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Flat File Source.Outputs[Flat File Source Output].Columns[Time]"
+                          name="Time"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Flat File Source.Outputs[Flat File Source Output].Columns[Patient]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Patient]"
+                          length="50"
+                          lineageId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Flat File Source.Outputs[Flat File Source Output].Columns[Patient]"
+                          name="Patient"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Flat File Source.Outputs[Flat File Source Output].Columns[Doctor]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Doctor]"
+                          length="50"
+                          lineageId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Flat File Source.Outputs[Flat File Source Output].Columns[Doctor]"
+                          name="Doctor"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Flat File Source.Outputs[Flat File Source Output].Columns[Procedure]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Procedure]"
+                          length="50"
+                          lineageId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Flat File Source.Outputs[Flat File Source Output].Columns[Procedure]"
+                          name="Procedure"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Flat File Source.Outputs[Flat File Source Output].Columns[Charge]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Charge]"
+                          length="50"
+                          lineageId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Flat File Source.Outputs[Flat File Source Output].Columns[Charge]"
+                          name="Charge"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Time]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="Time" />
+                        <externalMetadataColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Patient]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="Patient" />
+                        <externalMetadataColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Doctor]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="Doctor" />
+                        <externalMetadataColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Procedure]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="Procedure" />
+                        <externalMetadataColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Charge]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="Charge" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Flat File Source.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="65001"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Staging ADO NET Destination"
+                  componentClassID="Microsoft.ManagedComponentHost"
+                  contactInfo="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+                  description="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination."
+                  name="Bellevue Visits Staging ADO NET Destination"
+                  usesDispositions="true"
+                  version="2">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="The Destination database table name."
+                      expressionType="Notify"
+                      name="TableOrViewName"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."BellevueVisitsStaging"</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specify the number of rows per batch. The default is 0 which uses the same size as SSIS internal buffer. "
+                      expressionType="Notify"
+                      name="BatchSize">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out. A value of 0 indicates infinite time-out. "
+                      expressionType="Notify"
+                      name="CommandTimeout">30</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether to use the SqlBulkCopy interface to improve the performance of bulk insert operations. Only certain providers support this interface."
+                      expressionType="Notify"
+                      name="UseBulkInsertWhenPossible">true</property>
+                    <property
+                      dataType="System.String"
+                      name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Staging ADO NET Destination.Connections[IDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[localhost.tempdb1]"
+                      connectionManagerRefId="Package.ConnectionManagers[localhost.tempdb1]"
+                      description="Managed connection manager"
+                      name="IDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Staging ADO NET Destination.Inputs[ADO NET Destination Input]"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="ADO NET Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Staging ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Time]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Time"
+                          externalMetadataColumnId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Staging ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Time]"
+                          lineageId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Flat File Source.Outputs[Flat File Source Output].Columns[Time]" />
+                        <inputColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Staging ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Patient]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Patient"
+                          externalMetadataColumnId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Staging ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Patient]"
+                          lineageId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Flat File Source.Outputs[Flat File Source Output].Columns[Patient]" />
+                        <inputColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Staging ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Doctor]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Doctor"
+                          externalMetadataColumnId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Staging ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Doctor]"
+                          lineageId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Flat File Source.Outputs[Flat File Source Output].Columns[Doctor]" />
+                        <inputColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Staging ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Procedure]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Procedure"
+                          externalMetadataColumnId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Staging ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Procedure]"
+                          lineageId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Flat File Source.Outputs[Flat File Source Output].Columns[Procedure]" />
+                        <inputColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Staging ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Charge]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Charge"
+                          externalMetadataColumnId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Staging ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Charge]"
+                          lineageId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Flat File Source.Outputs[Flat File Source Output].Columns[Charge]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Staging ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Time]"
+                          dataType="wstr"
+                          length="100"
+                          name="Time" />
+                        <externalMetadataColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Staging ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Patient]"
+                          dataType="wstr"
+                          length="100"
+                          name="Patient" />
+                        <externalMetadataColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Staging ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Doctor]"
+                          dataType="wstr"
+                          length="100"
+                          name="Doctor" />
+                        <externalMetadataColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Staging ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Procedure]"
+                          dataType="wstr"
+                          length="100"
+                          name="Procedure" />
+                        <externalMetadataColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Staging ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Charge]"
+                          dataType="wstr"
+                          length="100"
+                          name="Charge" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Staging ADO NET Destination.Outputs[ADO NET Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="ADO NET Destination Error Output"
+                      synchronousInputId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Staging ADO NET Destination.Inputs[ADO NET Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Staging ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Staging ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Staging ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Staging ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Flat File Source"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="1033"
+                  name="Kirkland Visits Flat File Source"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Flat File Source.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Kirkland Visits Flat File Connection Manager]"
+                      connectionManagerRefId="Package.ConnectionManagers[Kirkland Visits Flat File Connection Manager]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Flat File Source.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Flat File Source.Outputs[Flat File Source Output].Columns[Time]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Time]"
+                          length="50"
+                          lineageId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Flat File Source.Outputs[Flat File Source Output].Columns[Time]"
+                          name="Time"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Flat File Source.Outputs[Flat File Source Output].Columns[Patient]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Patient]"
+                          length="50"
+                          lineageId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Flat File Source.Outputs[Flat File Source Output].Columns[Patient]"
+                          name="Patient"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Flat File Source.Outputs[Flat File Source Output].Columns[Clinic]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Clinic]"
+                          length="50"
+                          lineageId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Flat File Source.Outputs[Flat File Source Output].Columns[Clinic]"
+                          name="Clinic"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Flat File Source.Outputs[Flat File Source Output].Columns[Doctor]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Doctor]"
+                          length="50"
+                          lineageId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Flat File Source.Outputs[Flat File Source Output].Columns[Doctor]"
+                          name="Doctor"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Flat File Source.Outputs[Flat File Source Output].Columns[Procedure]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Procedure]"
+                          length="50"
+                          lineageId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Flat File Source.Outputs[Flat File Source Output].Columns[Procedure]"
+                          name="Procedure"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Flat File Source.Outputs[Flat File Source Output].Columns[Charge]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Charge]"
+                          length="50"
+                          lineageId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Flat File Source.Outputs[Flat File Source Output].Columns[Charge]"
+                          name="Charge"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Time]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="Time" />
+                        <externalMetadataColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Patient]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="Patient" />
+                        <externalMetadataColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Clinic]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="Clinic" />
+                        <externalMetadataColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Doctor]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="Doctor" />
+                        <externalMetadataColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Procedure]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="Procedure" />
+                        <externalMetadataColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Charge]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="Charge" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Flat File Source.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="65001"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Staging ADO NET Destination"
+                  componentClassID="Microsoft.ManagedComponentHost"
+                  contactInfo="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+                  description="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination."
+                  name="Kirkland Visits Staging ADO NET Destination"
+                  usesDispositions="true"
+                  version="2">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="The Destination database table name."
+                      expressionType="Notify"
+                      name="TableOrViewName"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."KirklandVisitsStaging"</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specify the number of rows per batch. The default is 0 which uses the same size as SSIS internal buffer. "
+                      expressionType="Notify"
+                      name="BatchSize">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out. A value of 0 indicates infinite time-out. "
+                      expressionType="Notify"
+                      name="CommandTimeout">30</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether to use the SqlBulkCopy interface to improve the performance of bulk insert operations. Only certain providers support this interface."
+                      expressionType="Notify"
+                      name="UseBulkInsertWhenPossible">true</property>
+                    <property
+                      dataType="System.String"
+                      name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Staging ADO NET Destination.Connections[IDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[localhost.tempdb1]"
+                      connectionManagerRefId="Package.ConnectionManagers[localhost.tempdb1]"
+                      description="Managed connection manager"
+                      name="IDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Staging ADO NET Destination.Inputs[ADO NET Destination Input]"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="ADO NET Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Staging ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Time]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Time"
+                          externalMetadataColumnId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Staging ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Time]"
+                          lineageId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Flat File Source.Outputs[Flat File Source Output].Columns[Time]" />
+                        <inputColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Staging ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Patient]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Patient"
+                          externalMetadataColumnId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Staging ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Patient]"
+                          lineageId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Flat File Source.Outputs[Flat File Source Output].Columns[Patient]" />
+                        <inputColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Staging ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Clinic]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Clinic"
+                          externalMetadataColumnId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Staging ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Clinic]"
+                          lineageId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Flat File Source.Outputs[Flat File Source Output].Columns[Clinic]" />
+                        <inputColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Staging ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Doctor]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Doctor"
+                          externalMetadataColumnId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Staging ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Doctor]"
+                          lineageId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Flat File Source.Outputs[Flat File Source Output].Columns[Doctor]" />
+                        <inputColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Staging ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Procedure]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Procedure"
+                          externalMetadataColumnId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Staging ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Procedure]"
+                          lineageId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Flat File Source.Outputs[Flat File Source Output].Columns[Procedure]" />
+                        <inputColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Staging ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Charge]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Charge"
+                          externalMetadataColumnId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Staging ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Charge]"
+                          lineageId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Flat File Source.Outputs[Flat File Source Output].Columns[Charge]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Staging ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Time]"
+                          dataType="wstr"
+                          length="100"
+                          name="Time" />
+                        <externalMetadataColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Staging ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Patient]"
+                          dataType="wstr"
+                          length="100"
+                          name="Patient" />
+                        <externalMetadataColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Staging ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Clinic]"
+                          dataType="wstr"
+                          length="100"
+                          name="Clinic" />
+                        <externalMetadataColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Staging ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Doctor]"
+                          dataType="wstr"
+                          length="100"
+                          name="Doctor" />
+                        <externalMetadataColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Staging ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Procedure]"
+                          dataType="wstr"
+                          length="100"
+                          name="Procedure" />
+                        <externalMetadataColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Staging ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Charge]"
+                          dataType="wstr"
+                          length="100"
+                          name="Charge" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Staging ADO NET Destination.Outputs[ADO NET Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="ADO NET Destination Error Output"
+                      synchronousInputId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Staging ADO NET Destination.Inputs[ADO NET Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Staging ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Staging ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Staging ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Staging ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Redmond Flat File Source"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="1033"
+                  name="Redmond Flat File Source"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Redmond Flat File Source.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Redmond Visits Flat File Connection Manager]"
+                      connectionManagerRefId="Package.ConnectionManagers[Redmond Visits Flat File Connection Manager]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Redmond Flat File Source.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Redmond Flat File Source.Outputs[Flat File Source Output].Columns[Time]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Redmond Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Time]"
+                          length="50"
+                          lineageId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Redmond Flat File Source.Outputs[Flat File Source Output].Columns[Time]"
+                          name="Time"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Redmond Flat File Source.Outputs[Flat File Source Output].Columns[Clinic]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Redmond Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Clinic]"
+                          length="50"
+                          lineageId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Redmond Flat File Source.Outputs[Flat File Source Output].Columns[Clinic]"
+                          name="Clinic"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Redmond Flat File Source.Outputs[Flat File Source Output].Columns[Patient]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Redmond Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Patient]"
+                          length="50"
+                          lineageId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Redmond Flat File Source.Outputs[Flat File Source Output].Columns[Patient]"
+                          name="Patient"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Redmond Flat File Source.Outputs[Flat File Source Output].Columns[Doctor]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Redmond Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Doctor]"
+                          length="50"
+                          lineageId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Redmond Flat File Source.Outputs[Flat File Source Output].Columns[Doctor]"
+                          name="Doctor"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Redmond Flat File Source.Outputs[Flat File Source Output].Columns[Procedure]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Redmond Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Procedure]"
+                          length="50"
+                          lineageId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Redmond Flat File Source.Outputs[Flat File Source Output].Columns[Procedure]"
+                          name="Procedure"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Redmond Flat File Source.Outputs[Flat File Source Output].Columns[Charge]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Redmond Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Charge]"
+                          length="50"
+                          lineageId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Redmond Flat File Source.Outputs[Flat File Source Output].Columns[Charge]"
+                          name="Charge"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Redmond Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Time]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="Time" />
+                        <externalMetadataColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Redmond Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Clinic]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="Clinic" />
+                        <externalMetadataColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Redmond Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Patient]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="Patient" />
+                        <externalMetadataColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Redmond Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Doctor]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="Doctor" />
+                        <externalMetadataColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Redmond Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Procedure]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="Procedure" />
+                        <externalMetadataColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Redmond Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Charge]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="Charge" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Redmond Flat File Source.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Redmond Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="65001"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Redmond Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Redmond Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Redmond Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Redmond Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Redmond Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task.Paths[Flat File Source Output]"
+                  endId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Staging ADO NET Destination.Inputs[ADO NET Destination Input]"
+                  name="Flat File Source Output"
+                  startId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Flat File Source.Outputs[Flat File Source Output]" />
+                <path
+                  refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task.Paths[Flat File Source Output1]"
+                  endId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Staging ADO NET Destination.Inputs[ADO NET Destination Input]"
+                  name="Flat File Source Output"
+                  startId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Flat File Source.Outputs[Flat File Source Output]" />
+                <path
+                  refId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task.Paths[Flat File Source Output2]"
+                  endId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input]"
+                  name="Flat File Source Output"
+                  startId="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Redmond Flat File Source.Outputs[Flat File Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Transform Visits Sequence Container\Transform Visits Data Execute SQL Task"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{362B9324-E65D-46AA-A574-99F7A25E0A75}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Transform Visits Data Execute SQL Task"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{34E6E136-488F-4119-929B-6AFA28AB36CB}"
+              SQLTask:IsStoredProc="True"
+              SQLTask:SqlStatementSource="pETLTransformVisitsData" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="@Date"
+                SQLTask:DtsVariableName="System::CreationDate"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="5"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Transform Visits Sequence Container.PrecedenceConstraints[Constraint 1]"
+          DTS:CreationName=""
+          DTS:DTSID="{E8127C3A-F8E2-42D9-AF78-F06DA6CF1B70}"
+          DTS:From="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 1"
+          DTS:To="Package\Transform Visits Sequence Container\Transform Visits Data Execute SQL Task" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Transform Visits Sequence Container.PrecedenceConstraints[Constraint 2]"
+          DTS:CreationName=""
+          DTS:DTSID="{EA3670E0-E213-4076-8773-28C62236310E}"
+          DTS:From="Package\Transform Visits Sequence Container\Transform Visits Data Execute SQL Task"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 2"
+          DTS:To="Package\Transform Visits Sequence Container\Drop Visits Foreign Keys Execute SQL Task" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{4EB4F32D-6F81-4EF1-8E79-237087754E3A}"
+      DTS:From="Package\Transform Visits Sequence Container"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Load to Visits Destination Sequence Container" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{E45A490C-B712-459F-A134-A74C9CB50381}"
+      DTS:From="Package\Pre-Load Sequence Container"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Transform Visits Sequence Container" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{AD9F04FA-D5BF-4A99-9843-DF859597005D}"
+      DTS:From="Package\Pre-load Patients Sequence Container"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Load to Patients Destination Sequence Container" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="222.4,41.6"
+          Id="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task"
+          TopLeft="5.5,1.35294089829841" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="332,97.6"
+          Size="332,140.8"
+          Id="Package\Load to Patients Destination Sequence Container"
+          TopLeft="541.42857258113,303.694117382964" />
+        <NodeLayout
+          Size="179.2,57.6"
+          Id="Package\Load to Visits Destination Sequence Container\Add Visits Foreign Keys Execute SQL Task"
+          TopLeft="38.3428583075806,93.4941171436678" />
+        <NodeLayout
+          Size="243.2,41.6"
+          Id="Package\Load to Visits Destination Sequence Container\Insert Visits DataExecute SQL Task"
+          TopLeft="4.71428622670334,22.4235288500582" />
+        <EdgeLayout
+          Id="Package\Load to Visits Destination Sequence Container.PrecedenceConstraints[Constraint]"
+          TopLeft="127.128572267142,64.0235288500582">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,29.4705882936096"
+              Start="0,0"
+              End="0,21.9705882936096">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.9705882936096" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="319.2,201.6"
+          Size="319.2,244.8"
+          Id="Package\Load to Visits Destination Sequence Container"
+          TopLeft="50.7142858222427,623.541176006074" />
+        <NodeLayout
+          Size="377.6,41.6"
+          Id="Package\Pre-load Patients Sequence Container\Split Valid and Invalid Emails with Python Execute Process Task"
+          TopLeft="19.8857150824701,26.8470585433463" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="402.4,173.6"
+          Size="402.4,216.8"
+          Id="Package\Pre-load Patients Sequence Container"
+          TopLeft="481.428572453405,10.0470588168268" />
+        <NodeLayout
+          Size="268.8,41.6"
+          Id="Package\Pre-Load Sequence Container\Create Staging Tables Execute SQL Task"
+          TopLeft="8.48571405003273,21.4235294539931" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="282.4,115.2"
+          Size="282.4,158.4"
+          Id="Package\Pre-Load Sequence Container"
+          TopLeft="51.4285715380498,18.9647059386575" />
+        <NodeLayout
+          Size="280,41.6"
+          Id="Package\Transform Visits Sequence Container\Drop Visits Foreign Keys Execute SQL Task"
+          TopLeft="27.2857142841937,224.78823500522" />
+        <NodeLayout
+          Size="232.8,41.6"
+          Id="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task"
+          TopLeft="49.4285714741872,91.7294115924399" />
+        <NodeLayout
+          Size="267.2,41.6"
+          Id="Package\Transform Visits Sequence Container\Transform Visits Data Execute SQL Task"
+          TopLeft="31.5714285790312,157.494117417148" />
+        <EdgeLayout
+          Id="Package\Transform Visits Sequence Container.PrecedenceConstraints[Constraint 1]"
+          TopLeft="165.500000026609,133.32941159244">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,24.1647058247077"
+              Start="0,0"
+              End="0,16.6647058247077">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.6647058247077" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Transform Visits Sequence Container.PrecedenceConstraints[Constraint 2]"
+          TopLeft="166.228571431612,199.094117417148">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,25.6941175880728"
+              Start="0,0"
+              End="0,18.1941175880728">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.1941175880728" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="335.2,272"
+          Size="335.2,315.2"
+          Id="Package\Transform Visits Sequence Container"
+          TopLeft="42.1428572325682,224.505882890518" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="210.028571527405,539.705882890518">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,83.8352931155561"
+              Start="0,0"
+              End="0,76.3352931155561">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,76.3352931155561" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="192.62857153805,177.364705938657">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="17.1142856945184,47.1411769518605"
+              Start="0,0"
+              End="17.1142856945184,39.6411769518605">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.5705884759303" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.5705884759303"
+                    Point2="0,23.5705884759303"
+                    Point3="4,23.5705884759303" />
+                  <mssgle:LineSegment
+                    End="13.1142856945184,23.5705884759303" />
+                  <mssgle:CubicBezierSegment
+                    Point1="13.1142856945184,23.5705884759303"
+                    Point2="17.1142856945184,23.5705884759303"
+                    Point3="17.1142856945184,27.5705884759303" />
+                  <mssgle:LineSegment
+                    End="17.1142856945184,39.6411769518605" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="682.628572453405,226.847058816827">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="24.8000001277247,76.8470585661372"
+              Start="0,0"
+              End="24.8000001277247,69.3470585661372">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.4235292830686" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,34.4235292830686"
+                    Point2="0,38.4235292830686"
+                    Point3="4,38.4235292830686" />
+                  <mssgle:LineSegment
+                    End="20.8000001277247,38.4235292830686" />
+                  <mssgle:CubicBezierSegment
+                    Point1="20.8000001277247,38.4235292830686"
+                    Point2="24.8000001277247,38.4235292830686"
+                    Point3="24.8000001277247,42.4235292830686" />
+                  <mssgle:LineSegment
+                    End="24.8000001277247,69.3470585661372" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Flat File Source"
+          TopLeft="376.999994382262,175.999997377396" />
+        <NodeLayout
+          Size="178.4,41.6"
+          Id="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\ADO NET Destination"
+          TopLeft="367.999994516373,352.99999473989" />
+        <NodeLayout
+          Size="155.2,41.6"
+          Id="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\Data Conversion"
+          TopLeft="381.999994307757,268.999995991588" />
+        <EdgeLayout
+          Id="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task.Paths[Flat File Source Output]"
+          TopLeft="455.899994345009,217.599997377396">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,51.399998614192"
+              Start="0,0"
+              End="0,43.899998614192">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.899998614192" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task.Paths[Data Conversion Output]"
+          TopLeft="458.399994412065,310.599995991588">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,42.3999987483025"
+              Start="0,0"
+              End="0,34.8999987483025">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.8999987483025" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load to Patients Destination Sequence Container\Extract Patient Data Flow Task\ADO NET Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="198.4,41.6"
+          Id="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Redmond Flat File Source"
+          TopLeft="745.714287301716,65.7647058247076" />
+        <NodeLayout
+          Size="220.8,41.6"
+          Id="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Flat File Source"
+          TopLeft="106.42857165513,59.6470587712465" />
+        <NodeLayout
+          Size="219.2,41.6"
+          Id="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Flat File Source"
+          TopLeft="387.857143682789,58.8823528895638" />
+        <NodeLayout
+          Size="285.6,41.6"
+          Id="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Staging ADO NET Destination"
+          TopLeft="401.428572283107,325.764705596808" />
+        <NodeLayout
+          Size="287.2,41.6"
+          Id="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Staging ADO NET Destination"
+          TopLeft="79.2857144544929,323.47058795176" />
+        <NodeLayout
+          Size="178.4,41.6"
+          Id="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\ADO NET Destination"
+          TopLeft="767.857144491709,339.529411467095" />
+        <EdgeLayout
+          Id="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task.Paths[Flat File Source Output2]"
+          TopLeft="844.914287301716,107.364705824708">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="12.1428571899935,232.164705642388"
+              Start="0,0"
+              End="12.1428571899935,224.664705642388">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,112.082352821194" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,112.082352821194"
+                    Point2="0,116.082352821194"
+                    Point3="4,116.082352821194" />
+                  <mssgle:LineSegment
+                    End="8.14285718999349,116.082352821194" />
+                  <mssgle:CubicBezierSegment
+                    Point1="8.14285718999349,116.082352821194"
+                    Point2="12.1428571899935,116.082352821194"
+                    Point3="12.1428571899935,120.082352821194" />
+                  <mssgle:LineSegment
+                    End="12.1428571899935,224.664705642388" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task.Paths[Flat File Source Output1]"
+          TopLeft="497.457143682789,100.482352889564">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="46.7714286003187,225.282352707244"
+              Start="0,0"
+              End="46.7714286003187,217.782352707244">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,108.641176353622" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,108.641176353622"
+                    Point2="0,112.641176353622"
+                    Point3="4,112.641176353622" />
+                  <mssgle:LineSegment
+                    End="42.7714286003187,112.641176353622" />
+                  <mssgle:CubicBezierSegment
+                    Point1="42.7714286003187,112.641176353622"
+                    Point2="46.7714286003187,112.641176353622"
+                    Point3="46.7714286003187,116.641176353622" />
+                  <mssgle:LineSegment
+                    End="46.7714286003187,217.782352707244" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task.Paths[Flat File Source Output]"
+          TopLeft="219.857143054811,101.247058771246">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,222.223529180513"
+              Start="0,0"
+              End="0,214.723529180513">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,214.723529180513" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Kirkland Visits Staging ADO NET Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\Bellevue Visits Staging ADO NET Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Transform Visits Sequence Container\Fill Visits Staging Data Flow Task\ADO NET Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

@@ -1,0 +1,99 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35818.85
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Databases", "Databases", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+	ProjectSection(SolutionItems) = preProject
+		Databases\DoctorsSchedules.bak = Databases\DoctorsSchedules.bak
+		Databases\Patients.bak = Databases\Patients.bak
+		Databases\README.txt = Databases\README.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataFiles", "DataFiles", "{D14A945A-C344-4944-A0D7-80F6F180E8B4}"
+	ProjectSection(SolutionItems) = preProject
+		DataFiles\ClinicDailyData\Bellevue\20100102NewPatients.csv = DataFiles\ClinicDailyData\Bellevue\20100102NewPatients.csv
+		DataFiles\ClinicDailyData\Kirkland\20100102NewPatients.csv = DataFiles\ClinicDailyData\Kirkland\20100102NewPatients.csv
+		DataFiles\ClinicDailyData\Redmond\20100102NewPatients.csv = DataFiles\ClinicDailyData\Redmond\20100102NewPatients.csv
+		DataFiles\ClinicDailyData\Bellevue\20100102Visits.csv = DataFiles\ClinicDailyData\Bellevue\20100102Visits.csv
+		DataFiles\ClinicDailyData\Kirkland\20100102Visits.csv = DataFiles\ClinicDailyData\Kirkland\20100102Visits.csv
+		DataFiles\ClinicDailyData\Redmond\20100102Visits.csv = DataFiles\ClinicDailyData\Redmond\20100102Visits.csv
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{EB9F360C-E019-43B9-9447-C6E253225CD9}"
+	ProjectSection(SolutionItems) = preProject
+		Documents\BISolutionWorksheets.xlsx = Documents\BISolutionWorksheets.xlsx
+		Documents\TheETLFinal.doc = Documents\TheETLFinal.doc
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Reports", "Reports", "{AA6E1146-437B-4CDD-976B-AEA41F83239E}"
+	ProjectSection(SolutionItems) = preProject
+		Reports\ClinicReportsData_2025-03-25.xlsx = Reports\ClinicReportsData_2025-03-25.xlsx
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{243051F1-C4D6-4536-9ABE-D91305E2F2AA}"
+	ProjectSection(SolutionItems) = preProject
+		Scripts\Create DWClinicReportData.sql = Scripts\Create DWClinicReportData.sql
+		Scripts\Create DWClinicReportingViews.sql = Scripts\Create DWClinicReportingViews.sql
+		Scripts\ETLVisitsData.sql = Scripts\ETLVisitsData.sql
+		Scripts\RestorePatientsAndDoctorScheduleDBs.sql = Scripts\RestorePatientsAndDoctorScheduleDBs.sql
+		Scripts\SQL Server Agent DWClinicReportDataETL.sql = Scripts\SQL Server Agent DWClinicReportDataETL.sql
+	EndProjectSection
+EndProject
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "ETLFinalSSISPackages", "ETLFinalSSISPackages\ETLFinalSSISPackages.dtproj", "{0BC46326-F203-D04E-7780-022D7977353D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Python Scripts", "Python Scripts", "{CEEAB162-32AA-42A0-8010-907A8D099C6D}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "PythonPatientsETL", "Python Scripts\PythonPatientsETL\PythonPatientsETL.pyproj", "{27AE7ACB-92EF-4D7E-84C6-B1D846BC5C80}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "PythonReportViewsETL", "Python Scripts\PythonReportViewsETL\PythonReportViewsETL.pyproj", "{276A0183-E938-4D70-9CF3-8FAEFE9F8E63}"
+EndProject
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "ETLDashboardReports", "ETLDashboardReports\ETLDashboardReports.rptproj", "{C8106411-4D29-9B6A-FCE7-E9B8455110F3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		DebugLocal|Any CPU = DebugLocal|Any CPU
+		Development|Any CPU = Development|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0BC46326-F203-D04E-7780-022D7977353D}.Debug|Any CPU.ActiveCfg = Development
+		{0BC46326-F203-D04E-7780-022D7977353D}.Debug|Any CPU.Build.0 = Development
+		{0BC46326-F203-D04E-7780-022D7977353D}.DebugLocal|Any CPU.ActiveCfg = Development
+		{0BC46326-F203-D04E-7780-022D7977353D}.DebugLocal|Any CPU.Build.0 = Development
+		{0BC46326-F203-D04E-7780-022D7977353D}.Development|Any CPU.ActiveCfg = Development
+		{0BC46326-F203-D04E-7780-022D7977353D}.Development|Any CPU.Build.0 = Development
+		{0BC46326-F203-D04E-7780-022D7977353D}.Release|Any CPU.ActiveCfg = Development
+		{0BC46326-F203-D04E-7780-022D7977353D}.Release|Any CPU.Build.0 = Development
+		{27AE7ACB-92EF-4D7E-84C6-B1D846BC5C80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27AE7ACB-92EF-4D7E-84C6-B1D846BC5C80}.DebugLocal|Any CPU.ActiveCfg = Debug|Any CPU
+		{27AE7ACB-92EF-4D7E-84C6-B1D846BC5C80}.Development|Any CPU.ActiveCfg = Release|Any CPU
+		{27AE7ACB-92EF-4D7E-84C6-B1D846BC5C80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{276A0183-E938-4D70-9CF3-8FAEFE9F8E63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{276A0183-E938-4D70-9CF3-8FAEFE9F8E63}.DebugLocal|Any CPU.ActiveCfg = Debug|Any CPU
+		{276A0183-E938-4D70-9CF3-8FAEFE9F8E63}.Development|Any CPU.ActiveCfg = Release|Any CPU
+		{276A0183-E938-4D70-9CF3-8FAEFE9F8E63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8106411-4D29-9B6A-FCE7-E9B8455110F3}.Debug|Any CPU.ActiveCfg = Debug
+		{C8106411-4D29-9B6A-FCE7-E9B8455110F3}.Debug|Any CPU.Build.0 = Debug
+		{C8106411-4D29-9B6A-FCE7-E9B8455110F3}.Debug|Any CPU.Deploy.0 = Debug
+		{C8106411-4D29-9B6A-FCE7-E9B8455110F3}.DebugLocal|Any CPU.ActiveCfg = DebugLocal
+		{C8106411-4D29-9B6A-FCE7-E9B8455110F3}.DebugLocal|Any CPU.Build.0 = DebugLocal
+		{C8106411-4D29-9B6A-FCE7-E9B8455110F3}.Development|Any CPU.ActiveCfg = Release
+		{C8106411-4D29-9B6A-FCE7-E9B8455110F3}.Development|Any CPU.Build.0 = Release
+		{C8106411-4D29-9B6A-FCE7-E9B8455110F3}.Development|Any CPU.Deploy.0 = Release
+		{C8106411-4D29-9B6A-FCE7-E9B8455110F3}.Release|Any CPU.ActiveCfg = Release
+		{C8106411-4D29-9B6A-FCE7-E9B8455110F3}.Release|Any CPU.Build.0 = Release
+		{C8106411-4D29-9B6A-FCE7-E9B8455110F3}.Release|Any CPU.Deploy.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{27AE7ACB-92EF-4D7E-84C6-B1D846BC5C80} = {CEEAB162-32AA-42A0-8010-907A8D099C6D}
+		{276A0183-E938-4D70-9CF3-8FAEFE9F8E63} = {CEEAB162-32AA-42A0-8010-907A8D099C6D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FCFAFDC7-5276-4EBE-8469-9F40C7EDE425}
+	EndGlobalSection
+EndGlobal
